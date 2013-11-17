@@ -7,7 +7,7 @@ const string DayToYear::monthNames[12] = {"January", "February", "March", "April
 
 void DayToYear::print()
 {
-    cout << "Day " << day<< " would be \t" << monthNames[monthIndex] << " " << day << endl;
+    cout << "Day " << totalDay << " would be \t" << monthNames[monthIndex] << " " << day << endl;
 }
 
 DayToYear& DayToYear::operator++()
