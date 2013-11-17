@@ -5,7 +5,7 @@
 using namespace std;
  class DayToYear {
     private:
-        int day, reducedDay;
+        int day, totalDay=0;
         string dayAsMonth;
         static const int monthDays[12]; //= {31, 28, 31, ...};
         static const string monthNames[12]; //= {"January", "February",...};
@@ -17,12 +17,11 @@ using namespace std;
         }
         void reduce(int foo)
         {
-            reducedDay = foo;
             day = foo;
-            while(reducedDay > monthDays[monthIndex])
+            while(day > monthDays[monthIndex])
             {
-                reducedDay-=monthDays[monthIndex];
-                monthIndex++;
+                day-=monthDays[monthIndex];
+                ++monthIndex;
             }
         }
 		DayToYear& operator++();        // prefix form; advance by 1 day
