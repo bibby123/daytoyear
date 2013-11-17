@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-    DayToYear foo = DayToYear(2);
+    DayToYear foo = DayToYear(1);
     foo.print();
-    for(int i=0;i<40;i++)
+    for(int i=0;i<32;i++)
     {
         ++foo;
         foo.print();
