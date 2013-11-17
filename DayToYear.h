@@ -5,7 +5,7 @@
 using namespace std;
  class DayToYear {
     private:
-        int day, totalDay=0;
+        int day, totalDay;
         string dayAsMonth;
         static const int monthDays[12]; //= {31, 28, 31, ...};
         static const string monthNames[12]; //= {"January", "February",...};
@@ -13,6 +13,7 @@ using namespace std;
     public:
         DayToYear(int foo)
         {
+            totalDay = foo;
             reduce(foo);
         }
         void reduce(int foo)
