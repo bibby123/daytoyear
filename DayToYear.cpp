@@ -18,10 +18,12 @@ DayToYear& DayToYear::operator++()
 	reduce(day);
 	return *this;
 }
-//DayToYear& DayToYear::operator++(int foo)
-//{
-//	DayToYear blah = *this;
-//	blah.day++;
-//	blah.reduce(day);
-//	return blah;
-//}
+DayToYear& DayToYear::operator++(int foo)
+{
+    DayToYear blah = *this;
+    ++totalDay;
+
+	++blah.day;
+	reduce(blah.day);
+	return blah;
+}
